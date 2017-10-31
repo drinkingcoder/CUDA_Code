@@ -1,0 +1,16 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 3.0 )
+PROJECT( CUDA_GUASSIAN_BLUR )
+
+FIND_PACKAGE( OpenCV REQUIRED )
+FIND_PACKAGE( CUDA REQUIRED )
+
+SET( EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin )
+SET( CMAKE_CXX_FLAGS "-std=c++11" )
+
+CUDA_ADD_EXECUTABLE( main main.cu
+            kernelGaussian.cu
+            kernelGaussianSharedMemory.cu
+        )
+TARGET_LINK_LIBRARIES(
+    main ${OpenCV_LIBS}
+    )

@@ -1,0 +1,4 @@
+/home/drinkingcoder/Documents/Apps/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment1/Code
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment1/Code/cmake-build-debug
