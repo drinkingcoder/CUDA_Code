@@ -8,11 +8,11 @@
 #include "kernel.hpp"
 
 class KernelGaussian : public Kernel {
-#define IMAGESIZE_HEIGHT 480
-#define IMAGESIZE_WIDTH 640
+#define IMAGESIZE_HEIGHT 1080
+#define IMAGESIZE_WIDTH 1920
 #define IMAGE_SIZE  (IMAGESIZE_HEIGHT*IMAGESIZE_WIDTH)
 #define KERNEL_SIZE     9
-#define PATCHSIZE_HEIGHT    24
+#define PATCHSIZE_HEIGHT    32
 #define PATCHSIZE_WIDTH     32
 public:
     KernelGaussian():Kernel()

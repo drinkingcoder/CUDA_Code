@@ -71,8 +71,8 @@ void KernelGaussian::preparation() {
 
 void KernelGaussian::awakeKernel() {
 #define BLOCKSIZE 32
-#define GRIDSIZEX (IMAGESIZE_WIDTH/BLOCKSIZE)
-#define GRIDSIZEY (IMAGESIZE_HEIGHT/BLOCKSIZE)
+#define GRIDSIZEX (IMAGESIZE_WIDTH/BLOCKSIZE+1)
+#define GRIDSIZEY (IMAGESIZE_HEIGHT/BLOCKSIZE+1)
     dim3 gridDim(GRIDSIZEX,GRIDSIZEY);
     dim3 blockDim(BLOCKSIZE,BLOCKSIZE);
 
@@ -84,8 +84,8 @@ void KernelGaussian::postProcessing(){
             cudaMemcpy(m_resultImage.data,m_devResultBitmap,3*IMAGESIZE_WIDTH*IMAGESIZE_HEIGHT, cudaMemcpyDeviceToHost)
     );
 //    imwrite("Kernel9x9.jpg",m_resultImage);
-//    imshow("Image after blurred",m_resultImage);
-//    waitKey();
+    imshow("Image after blurred",m_resultImage);
+    waitKey();
 
     HANDLE_ERROR(
             cudaFree(m_devInputBitmap)
