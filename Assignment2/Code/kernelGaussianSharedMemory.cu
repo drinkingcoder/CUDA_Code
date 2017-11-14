@@ -188,17 +188,18 @@ __global__ static void kernel3(unsigned char *result, unsigned char *ptr, double
 //        cachedGaussian[poffset] = gaussian_kernel[poffset];
 //    }
 
-    int px,py,poffset,tx = x,ty = y;
+    int px,py,poffset;
+//    int tx = x,ty = y;
     int patchSizeX = KERNEL_SIZE-1 + blockDim.x;
-    bool flag = false;
+//    bool flag = false;
 
     if( x < KERNEL_SIZE/2 || x >= IMAGESIZE_WIDTH - KERNEL_SIZE/2 ) return;
     if( y < KERNEL_SIZE/2 || y >= IMAGESIZE_HEIGHT - KERNEL_SIZE/2 ) return;
 
 //    if( threadIdx.y < KERNEL_SIZE/2 ) {
-        flag = true;
-        tx = threadIdx.x;
-        ty = threadIdx.y - KERNEL_SIZE/2;
+//        flag = true;
+//        tx = threadIdx.x;
+//        ty = threadIdx.y - KERNEL_SIZE/2;
 //    } else if(threadIdx.y < KERNEL_SIZE/2 * 2 ) {
 //        flag = true;
 //        tx = threadIdx.y - KERNEL_SIZE/2 * 2;
@@ -268,7 +269,7 @@ __global__ static void kernel3(unsigned char *result, unsigned char *ptr, double
         double tmp_result = 0;
         for( int i = 0; i < KERNEL_SIZE; i++)
             for( int j = 0; j < KERNEL_SIZE; j++) {
-                tmp_result += patch[(poffset + i * patchSizeX + j) * 3 + channel] * cachedGaussian[i * KERNEL_SIZE + j];
+                tmp_result += patch[(poffset + i * patchSizeX + j) * 3 + channel] * gaussian_kernel[i * KERNEL_SIZE + j];
             }
         result[offset*3 + channel] = (unsigned char) (tmp_result);
     }

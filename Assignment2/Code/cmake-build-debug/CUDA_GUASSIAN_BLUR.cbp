@@ -37,6 +37,56 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="testKSM">
+				<Option output="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/bin/testKSM" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 testKSM"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testKSM/fast">
+				<Option output="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/bin/testKSM" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 testKSM/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="main">
 				<Option output="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/bin/main" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/bin"/>
@@ -97,14 +147,34 @@
 		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/CMakeFiles/main.dir/main_generated_main.cu.o">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/CMakeFiles/testKSM.dir/testKSM_generated_kernelGaussian.cu.o">
+			<Option target="testKSM"/>
+		</Unit>
+		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/CMakeFiles/testKSM.dir/testKSM_generated_kernelGaussian.cu.o.rule">
+			<Option target="testKSM"/>
+		</Unit>
+		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/CMakeFiles/testKSM.dir/testKSM_generated_kernelGaussianSharedMemory.cu.o">
+			<Option target="testKSM"/>
+		</Unit>
+		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/CMakeFiles/testKSM.dir/testKSM_generated_kernelGaussianSharedMemory.cu.o.rule">
+			<Option target="testKSM"/>
+		</Unit>
+		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/cmake-build-debug/CMakeFiles/testKSM.dir/testKSM_generated_testKSM.cu.o">
+			<Option target="testKSM"/>
+		</Unit>
 		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/kernelGaussian.cu">
+			<Option target="testKSM"/>
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/kernelGaussianSharedMemory.cu">
+			<Option target="testKSM"/>
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/main.cu">
 			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/testKSM.cu">
+			<Option target="testKSM"/>
 		</Unit>
 		<Unit filename="/home/drinkingcoder/Documents/Lessons/GPU_Computing/Assignments/Assignment2/Code/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

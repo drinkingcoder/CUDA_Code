@@ -13,6 +13,13 @@ CUDA_ADD_EXECUTABLE( main main.cu
             kernelGaussian.cu
             kernelGaussianSharedMemory.cu
         )
+CUDA_ADD_EXECUTABLE( testKSM testKSM.cu
+        kernelGaussian.cu
+        kernelGaussianSharedMemory.cu
+        )
 TARGET_LINK_LIBRARIES(
     main ${OpenCV_LIBS}
     )
+TARGET_LINK_LIBRARIES(
+        testKSM ${OpenCV_LIBS}
+)

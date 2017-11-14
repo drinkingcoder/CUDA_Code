@@ -11,7 +11,7 @@ class KernelGaussian : public Kernel {
 #define IMAGESIZE_HEIGHT 1080
 #define IMAGESIZE_WIDTH 1920
 #define IMAGE_SIZE  (IMAGESIZE_HEIGHT*IMAGESIZE_WIDTH)
-#define KERNEL_SIZE     9
+#define KERNEL_SIZE     7
 #define PATCHSIZE_HEIGHT    32
 #define PATCHSIZE_WIDTH     32
 public:

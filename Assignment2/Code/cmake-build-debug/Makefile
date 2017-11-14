@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testKSM
+
+# Build rule for target.
+testKSM: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testKSM
+.PHONY : testKSM
+
+# fast build rule for target.
+testKSM/fast:
+	$(MAKE) -f CMakeFiles/testKSM.dir/build.make CMakeFiles/testKSM.dir/build
+.PHONY : testKSM/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -131,6 +144,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... testKSM"
 	@echo "... main"
 .PHONY : help
 

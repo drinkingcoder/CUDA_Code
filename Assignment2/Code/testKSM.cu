@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {
     KernelTimeTest test;
-    std::shared_ptr<Kernel> kernel = make_shared<KernelGaussian>();
+    std::shared_ptr<Kernel> kernel = make_shared<KernelGaussianSharedMemory>();
     test.testSingleTime(kernel);
 //    test.testMultipleTimes(kernel,100);
     std::cout << " duration = " << test.getDuration() << std::endl;
